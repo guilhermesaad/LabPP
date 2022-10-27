@@ -20,12 +20,13 @@ int main(int argc, char** argv)
     }
 
 
-    
+
     for(int i=0; i < argc; ++i)
         printf("%s\n", argv[i]);
     printf("Bom dia seu verme insolente ahahahahah");
 
     return 0;
+
 
 
 }
