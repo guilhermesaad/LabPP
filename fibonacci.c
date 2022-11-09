@@ -9,21 +9,10 @@
 
 int main(int argc, char *argv[]){
 
-    int pos = 0;
-    printf("Qual posicao da sequencia de Fibonacci deseja?\n");
-    scanf("%d", &pos);
+    int num=0;
+    scanf("%d",&num);
 
-    int j = 1;
-    int z = 0;
+    for(int j=1, z=0, i=0, t=0; i<num; i++, t=z+j, z=j, j=t) printf("%d,", z);printf(" ...");
 
-    for(int i=0; i<pos; i++){
-        printf("%d, ", z);
-        int t = z + j;
-        z = j;
-        j = t;
-    }
-    printf("...");
-
-
-return 0;
+return 0; 
 }

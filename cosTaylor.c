@@ -6,58 +6,38 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 #ifdef M_PI
   #undef M_PI
 #endif
-#define M_PI 3.141592653589793115997963468544185161590576171875
+#define M_PI 3.14159265358979311599796346544185161590576171875
 
 int fatorial(int X );
-int potp(int Y, int P);
 
 int main(int argc, char *argv[]){
 
     int n = 0;
     double x = 0.00;
-    double taylor = 0; 
+    double taylor = 0.00; 
 
     printf("Digite o seu n: \n");
     scanf("%d",&n);
 
     printf("Digite o seu x: \n");
-    scanf("%f",&x);
+    scanf("%lf",&x);
 
-    for(int i=1; i<n; i++){
+    for(int i=0; i<n; i++){
 
-        taylor = potp(-1, i) * ((potp(x * M_PI, 2*i))/fatorial(2*i));
+        taylor = ((pow(-1, i)) * ((pow(x * M_PI, 2*i))/fatorial(2*i))) + taylor;
 
     }
 
-    printf("%f\n", taylor);
-
-
+    printf("%lf\n", taylor);
 
 return 0;   
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-int potp(int Y, int P){
-    int pot = 0;
-
-    if(P >= 0){
-        pot = Y;
-
-        for(int i=1; i<P; i++){
-            pot = pot  * Y;
-        }
-    }
-    else{return 0;}
-
-return pot;
-}
 
 int fatorial(int X){
     if(X == 0){
