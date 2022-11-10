@@ -2,7 +2,7 @@
  * Arquivo: cosTaylor.c
  * Data criação: 04/nov/2022
  * Autor: Guilherme Saad
- * Calcular a séria de Taylor
+ * Calcular a série de Taylor
  */
 
 #include <stdio.h>

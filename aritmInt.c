@@ -12,6 +12,7 @@ int main(int argc, char *argv[]){
     printf("Digite dois numeros.\n");
     scanf("%d %d", &Int1, &Int2);
 
+
     int soma = Int1 + Int2;
     int multiplicacao = Int1 * Int2;
     int divisao = Int1 / Int2;
