@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int fatorial(int X);
+long fatorial(long X);
 
 int main(int argc, char *argv[]){
     long int n = 0;
@@ -21,9 +21,9 @@ int main(int argc, char *argv[]){
 return 0;
 }
 
-int fatorial(int X){
+long fatorial(long X){
     if(X == 0){
-        return 1;
+        return 1.0;
     }
 
     return X*fatorial(X-1);

@@ -10,13 +10,6 @@
 int main(int argc, char *argv[]){
     float peso = 0.00;
     float altura = 0.00;
-//CASVGHJKJHGCVGHJOKDHJCVHABKSPICHBSDAHBNCSDABQWHBDKJCNK
-
-
-
-
-
-
 
     printf("Qual seu peso?\n");
     scanf("%f", &peso);

@@ -19,14 +19,11 @@ int main(int argc, char *argv[]){
     int subtracao = Int1 - Int2;
     int resto = Int1 % Int2; 
 
-    printf("%d + %d = %d \n", Int1, Int2, soma);
-    printf("%d - %d = %d \n", Int1, Int2, subtracao);
-    printf("%d * %d = %d \n", Int1, Int2, multiplicacao);
-    printf("%d / %d = %d \n", Int1, Int2, divisao);
-    printf("%d %% %d = %d \n", Int1, Int2, resto);
-            
-
-
+    printf("%d+%d = %d, ", Int1, Int2, soma);
+    printf("%d-%d = %d, ", Int1, Int2, subtracao);
+    printf("%d*%d = %d, ", Int1, Int2, multiplicacao);
+    printf("%d/%d = %d, ", Int1, Int2, divisao);
+    printf("%d%%%d = %d ", Int1, Int2, resto);
 
 return 0;
 }
