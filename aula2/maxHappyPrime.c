@@ -29,7 +29,7 @@ int main(){
                 printf("%d", n);
                 break;
             }
-            n=n-1;
+            n-=1;
         }
     }
 return 0;
@@ -49,7 +49,7 @@ bool primo(int n){
 }
 
 int feliz1(int n){    
-    int rem = 0, sum = 0;    
+    int rem, sum = 0;    
           
     while(n > 0){    
         rem = n%10;    
