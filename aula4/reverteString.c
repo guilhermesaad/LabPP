@@ -27,7 +27,7 @@ int main () {
         fraseInvertida[i] = toupper(frase[count]);
         count --;
     }
-
+    fraseInvertida[strlen(frase)] = '\0';
     printf("%s", fraseInvertida);
 
 return 0;
