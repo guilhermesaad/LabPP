@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Guilherme/LabPP/aula4",
-      "program": "c:/Users/Guilherme/LabPP/aula4/build/Debug/outDebug",
+      "cwd": "c:/Users/Guilherme/LabPP/aula5",
+      "program": "c:/Users/Guilherme/LabPP/aula5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
