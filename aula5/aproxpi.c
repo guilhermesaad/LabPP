@@ -8,23 +8,25 @@
 #include <stdio.h>
 #include <math.h>
 
-float aproximacao(double numero);
+long double aproximacao(double numero);
 
 int main(){
     double numero = 0.0;
     printf("Digite o quao preciso voce quer o numero pi, quanto maior a entrada mais precisa a aproximacao.\n");
-    scanf("%lf",&numero);
+    scanf("%Lf",&numero);
 
-    printf("%f", aproximacao(numero));
+    printf("%Lf", aproximacao(numero));
 
 return 0;
 }
 
-float aproximacao(double numero){
+long double aproximacao(double numero){
+    int elevado = 0;
 
     if(!numero)  return 4;
 
-    else
-        return (aproximacao(numero-1) + 4*(pow(-1.0,numero)/2*numero+1));
-    
+    else{
+        elevado = pow(-1.0,numero);
+        return ((aproximacao(numero-1)) + (4 * ( elevado / (2*numero+1))));
+    }
 }
