@@ -2,7 +2,7 @@
  * Arquivo: altura.c
  * Data criação: 05/jan/2023
  * Autor: Guilherme Saad
- * Acha o fibonacci
+ * formata a altura
  */
 
 #include <stdio.h>
