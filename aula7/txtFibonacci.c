@@ -9,8 +9,9 @@
 
 int main(){
 
-    int aux, num, z = 0;
-    int t = 0;
+    int num = 0;
+    long long int z = 0;
+    
     FILE * fib;
 
     printf("Digite o indice da sequencia de fibonacci:\n");
@@ -19,12 +20,12 @@ int main(){
     fib = fopen("fibonacci.txt", "w");
 
     for(int j=1, i=0, t=0; i<num; i++, t=z+j, z=j, j=t){
-        fprintf(fib, "%d\n", z);
+        fprintf(fib, "%llu\n", z);
 
         if(i+1==num)
-            printf("Maior numero:%d\n", z);
+            printf("Maior numero: %llu\n", z);
     }
     fclose(fib);
-    
+
 return 0;
 }
