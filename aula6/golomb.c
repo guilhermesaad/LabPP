@@ -2,7 +2,7 @@
  * Arquivo: golomb.c
  * Data criação: 12/jan/2023
  * Autor: Guilherme Saad
- * XXXXXXXXXXXX
+ * Preenche um vetor com a sequencia de golomb, informando maximo minimo e media.
  */
 
 #include <stdio.h>

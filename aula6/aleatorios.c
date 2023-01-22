@@ -2,7 +2,7 @@
  * Arquivo: aleatorios.c
  * Data criação: 12/jan/2023
  * Autor: Guilherme Saad
- * XXXXXXXXXXXX
+ * Informa maximo minimo e media de uma sequencia aleatoria
  */
 
 #include <stdio.h>
