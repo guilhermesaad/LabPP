@@ -25,21 +25,30 @@ void Node_delBack(Node ** bola);  // dequeue
 void Node_delete(Node ** bola, int indice);
 void Node_clear(Node ** bola);
 
+char Node_delBack2(Node ** p);
+
 int main(void) {
     Node * lista = NULL;
+    int numero_deletado = 0;
     Node_print(lista);
-    Node_addFront(&lista, 3);
-    Node_addFront(&lista, 4);
-    Node_addFront(&lista, 5);
-    Node_addBack(&lista, 3);
-    Node_addBack(&lista, 4);
-    Node_addBack(&lista, 5);
+    Node_addFront(&lista, '3');
+    Node_addFront(&lista, '4');
+    Node_addFront(&lista, '5');
+    Node_addBack(&lista, '3');
+    Node_addBack(&lista, '4');
+    Node_addBack(&lista, '5');
     Node_print(lista);
     Node * idx = Node_Index(lista, 0);
     if(idx)
         printf("%p, %d\n", idx, idx->info);
     Node_delFront(&lista);
+
     Node_delBack(&lista);
+    printf("numero deletado: %d\n", Node_delBack2(&lista));
+
+    numero_deletado = Node_delBack2(&lista);
+    printf("O numero deletado foi %d\n", numero_deletado);
+
     Node_insert(&lista, 8, 2);
     Node_print(lista);
     Node_delete(&lista, 2);
@@ -115,13 +124,32 @@ void Node_delBack(Node ** bola) {
             if(!(it->next)->next)
                 penultimo = it;
     }
-    if(penultimo->next) {
+    if(penultimo->next){
+
         free(penultimo->next);
         penultimo->next = NULL;
     } else {
         free(penultimo);
         *bola = NULL;
     }
+}
+
+char Node_delBack2(Node ** p){
+    Node* q = *p;
+    if(!q)  return '\0';
+
+    if(!(q->next)){
+        *p = NULL;
+        char el = q -> info;
+        free(q);
+        return el;
+    }
+    while(q->next->next)    q = q->next;
+    char el = q -> next -> info;
+    free(q->next);
+    q->next = NULL;
+    return el;
+
 }
 
 void Node_delete(Node ** bola, int indice) {
